@@ -1,19 +1,22 @@
 {% macro renderHeader(activePage='index') %}
-    <header class="header">
-        <div class="logo">
-            <a href="/">
-                <img src="/assets/img/logo.svg" alt="logo" height="32" />
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo-light.svg" height="32">
             </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item {%if activePage == 'index' %}active{% endif %}">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item {%if activePage == 'services' %}active{% endif %}">
+                        <a class="nav-link" href="/services.html">Services</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <nav class="navigation">
-            <ul class="navigation-list">
-                <li class="navigation-list-item {%if activePage == 'index' %}current{% endif %}">
-                    <a href="/" class="navigation-list-link">Index</a>
-                </li>
-                <li class="navigation-list-item {%if activePage == 'services' %}current{% endif %}">
-                    <a href="/services.html" class="navigation-list-link">Servicios</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    </nav>
 {% endmacro %}
