@@ -1,0 +1,17 @@
+{% extends "_layout.html" %}
+{% import 'macros/_header.html' as header %}
+
+{% block head %}
+    <title>My Example Site - Home</title>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+{% endblock %}
+
+{% block header %}
+{{ header.renderHeader('index') }}
+{% endblock %}
+
+    {% block content %}
+        <b>Hello world!</b>
+    {% endblock %}

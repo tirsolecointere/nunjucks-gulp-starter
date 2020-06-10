@@ -1,0 +1,19 @@
+{% macro renderHeader(activePage='index') %}
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="/assets/img/logo.svg" alt="logo" height="32" />
+            </a>
+        </div>
+        <nav class="navigation">
+            <ul class="navigation-list">
+                <li class="navigation-list-item {%if activePage == 'index' %}current{% endif %}">
+                    <a href="/" class="navigation-list-link">Index</a>
+                </li>
+                <li class="navigation-list-item {%if activePage == 'services' %}current{% endif %}">
+                    <a href="/services.html" class="navigation-list-link">Servicios</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+{% endmacro %}
