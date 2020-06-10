@@ -10,13 +10,14 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 // Static Server + watching scss/js/html files.
-gulp.task('serve', ['sass', 'compressJs', 'nunjucks-html-watch'], function () {
+gulp.task('serve', ['sass', 'compressJs', 'nunjucks-html-watch', 'compressImage'], function () {
     browserSync.init({
         server: './build'
     });
 
     gulp.watch('src/assets/sass/*.sass', ['sass']);
     gulp.watch('src/assets/js/*.js', ['compressJs']);
+    gulp.watch('src/assets/img/*', ['compressImage']);
     gulp.watch('./**/*.html', ['nunjucks-html-watch'])
 });
 
