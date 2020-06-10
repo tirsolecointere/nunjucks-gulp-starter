@@ -25,6 +25,7 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "js-yaml": "^3.14.0",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
