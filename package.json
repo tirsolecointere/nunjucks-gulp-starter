@@ -1,7 +1,7 @@
 {
   "name": "nunjucks-gulp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nunjucks and Gulp starter template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,8 +10,8 @@
   "resolutions": {
     "graceful-fs": "4.2.3"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tirso Lecointere",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
